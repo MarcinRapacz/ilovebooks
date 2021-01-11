@@ -4,7 +4,7 @@
 declare module "*.md" {
   const content: {
     attributes: any;
-    react: any;
+    html: string;
   };
   export = content;
 }

@@ -1,6 +1,7 @@
-import { attributes, react as HomeContent } from "../content/home.md";
+import { attributes, html } from "../content/home.md";
 import { Container, Row, Col } from "react-bootstrap";
 import Banner from "../components/Banner";
+import Html from "../components/Html";
 
 const Index = () => {
   let { title, cats, banner } = attributes;
@@ -12,7 +13,7 @@ const Index = () => {
         <Row>
           <Col>
             <h1>{title}</h1>
-            <HomeContent />
+            <Html html={html} />
             <ul>
               {cats.map((cat, k) => (
                 <li key={k}>
