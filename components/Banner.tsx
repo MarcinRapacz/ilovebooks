@@ -1,4 +1,3 @@
-import Image from "next/image";
 import style from "../scss/Banner.module.scss";
 
 interface IProps {
@@ -8,13 +7,10 @@ interface IProps {
 const Banner = (props: IProps) => {
   return (
     <div className={`${style.container}`}>
-      <Image
+      <img
+        className={`${style.image}`}
         src={`/${props.src}`}
-        alt="Picture of the author"
-        layout="fill"
-        priority={true}
-        objectFit="cover"
-        objectPosition="bottom center"
+        alt="Main banner"
       />
     </div>
   );
