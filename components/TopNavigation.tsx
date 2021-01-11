@@ -1,30 +1,38 @@
 import Link from "next/link";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import style from "../scss/TopNavigation.module.scss";
 
 const TopNavigation = () => {
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg="dark"
       variant="dark"
-      className="mb-4"
+      className={`${style.container} border-0`}
     >
       <Container>
         <Link href="/">
-          <Navbar.Brand href="/">I Love Books</Navbar.Brand>
+          <Navbar.Brand className="border-0" href="/">
+            I Love Books
+          </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
             <Link href="/">
-              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link className="border-0" href="/">
+                Home
+              </Nav.Link>
             </Link>
             <Link href="/about">
-              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link className="border-0" href="/about">
+                About
+              </Nav.Link>
             </Link>
             <Link href="/contact">
-              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Nav.Link className="border-0" href="/contact">
+                Contact
+              </Nav.Link>
             </Link>
           </Nav>
         </Navbar.Collapse>
